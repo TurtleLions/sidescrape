@@ -38,8 +38,7 @@ function move(event) {
             break;
     }
     context.clearRect(0, 0, visibleCanvas.width, visibleCanvas.height);
-    rotateAndPaintImage(context, dotImage, angle*TO_RADIANS, dotX, dotY, dotX, dotY
-    context.drawImage(dotImage, dotX, dotY);
+    rotateAndPaintImage(context, dotImage, angle*TO_RADIANS, dotX, dotY, dotX, dotY);
     event.preventDefault(); // prevents arrows from scrolling
 }
 function rotateAndPaintImage ( context, image, angleInRad , positionX, positionY, axisX, axisY ) {
