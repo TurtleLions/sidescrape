@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         context.drawImage(dotImage, dotX, dotY);
     }
     while(True){
-        dotX+=velocity*Math.sin(angle*TO_RADIANS)
-        dotY+=velocity*Math.cos(angle*TO_RADIANS)
+        dotX+=Math.round(velocity*Math.sin(angle*TO_RADIANS))
+        dotY+=Math.round(velocity*Math.cos(angle*TO_RADIANS))
         if(velocity>0){
             velocity-=1;
         }
