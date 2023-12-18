@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         if(velocity>0){
             velocity-=1;
         }
+        dotX+=1;
     }
 });
 
