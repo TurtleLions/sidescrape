@@ -1,7 +1,7 @@
 // Copyright (c) 2020 eContriver LLC
 
-var dotX = 0;
-var dotY = 0;
+var dotX = 500;
+var dotY = 200;
 var angle = 0;
 var velocity = 0;
 var visibleCanvas = null;
@@ -19,7 +19,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     dotImage.onload = function() {
         context.drawImage(dotImage, dotX, dotY);
     }
-    
+    while(True){
+        dotX+=velocity*Math.sin(angle*TO_RADIANS)
+        dotY+=velocity*Math.cos(angle*TO_RADIANS)
+        if(velocity>0){
+            velocity-=1;
+        }
+    }
 });
 
 function move(event) {
