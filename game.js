@@ -10,8 +10,6 @@ var context = null;
 var dotImage = null;
 var TO_RADIANS = Math.PI/180; 
 
-
-
 document.addEventListener("DOMContentLoaded", function(event) {
     visibleCanvas = document.getElementById('game');
     visibleCanvas.style.backgroundColor = "red";
@@ -48,5 +46,7 @@ function move(event) {
             break;
     }
     context.clearRect(0, 0, visibleCanvas.width, visibleCanvas.height);
+    document.getElementById("xy").innerHTML = intDotX + (dotMag*Math.cos(angle*TO_RADIANS)) + ' ' + intDotY + (dotMag*Math.sin(angle*TO_RADIANS))
+    context.drawImage(dotImage, intDotX + (dotMag*Math.cos(angle*TO_RADIANS)), intDotY + (dotMag*Math.sin(angle*TO_RADIANS)));
     event.preventDefault(); // prevents arrows from scrolling
 }
