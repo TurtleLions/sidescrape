@@ -45,7 +45,7 @@ function move(event) {
             break;
     }
     context.clearRect(0, 0, visibleCanvas.width, visibleCanvas.height);
-    rotateAndPaintImage(context, dotImage, angle*TO_RADIANS, dotX, dotY, dotX, dotY);
+    rotateAndPaintImage(context, dotImage, angle*TO_RADIANS, dotX, dotY, 300, 300);
     event.preventDefault(); // prevents arrows from scrolling
 }
 function rotateAndPaintImage ( context, image, angleInRad , positionX, positionY, axisX, axisY ) {
